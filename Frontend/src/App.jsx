@@ -5,6 +5,7 @@ import Shop from './pages/Shop/Shop'
 import About from './components/About'
 import Blog from './components/Blog'
 import NavBar from './components/NavBar'
+import SingleBook from './pages/Shop/SingleBook'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/shop" element={<Shop/>} />
           <Route path='/about' element={<About/>}/>
           <Route path='/blog' element={<Blog/>}/>
+          <Route path='/get_Book/:id' element={<SingleBook/>}/>
         </Routes>
       </Router>
     </>
