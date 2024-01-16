@@ -12,6 +12,11 @@ import Dashboard from './dashboard/Dashboard'
 import UploadBook from './dashboard/UploadBook'
 import ManageBook from './dashboard/ManageBook'
 import EditBook from './dashboard/EditBook'
+import SignUp from './components/SignUp'
+// import OAuthProvider from './context/OAuthProvider'
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import LogIn from './components/LogIn'
 
 function App() {
 
@@ -20,6 +25,7 @@ function App() {
       <Router>
         {/* <NavBar/> */}
         <div className='min-h-screen'>
+          {/* <OAuthProvider> */}
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/shop" element={<Shop/>} />
@@ -32,7 +38,22 @@ function App() {
             <Route path='/admin/dashboard/manage' element={<ManageBook/>}/>
             <Route path='/admin/dashboard/edit_book/:id' element={<EditBook/>}/>
           </Route>
+          <Route path='/sign-up' element={<SignUp/>}/>
+          <Route path='/sign-in' element={<LogIn/>} />
         </Routes>
+        <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        />
+          {/* </OAuthProvider> */}
         </div>
         {/* <MyFooter/> */}
       </Router>
